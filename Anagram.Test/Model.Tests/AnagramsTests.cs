@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Anagranimals;
 
@@ -7,6 +8,21 @@ namespace Anagranimals.Tests
     [TestClass]
     public class AnagramTest
     {
+        [TestMethod] 
+        public void ConvertArray_ConvertToList_Array()
+        {
+            char[] testArray = { 'f', 'm' };
+            Anagram newAnalgram = new Anagram("any string");
+            List<char> testList = new List<char>()
+            {
+                'f',
+                'u'
+            };
+            List<char> actualList = newAnalgram.ArrayToList(testArray);
+            CollectionAssert.AreEqual(actualList, testList);
+        }
+
+
         [TestMethod]
         public void IsPartOfAlphabet_CheckIfLetter_Bool()
         {

@@ -28,6 +28,14 @@ namespace Anagranimals
             return newArray;
         }
 
+
+        public List<char> ArrayToList(char[] charArray)
+        {
+            List<char> letterList = new List<char>(charArray);
+            return letterList;
+ 
+        }
+
         public bool IsPartOfAlphabet(char letter)
         {
             bool answer = char.IsLetter(letter);
@@ -40,7 +48,19 @@ namespace Anagranimals
             return length;
         }
 
-
+        //public bool TestIfAnagram(char[] originalArray, char[] newArray)
+        //{
+        //    for (x = 0; x < originalArray.Length; x++)
+        //    {
+        //        for (y = 0; y < newArray.Length, y++)
+        //        {
+        //            if (originalArray[x] == newArray[y])
+        //            {
+                        
+        //            }
+        //        }
+        //    }
+        //}
 
 
     }
